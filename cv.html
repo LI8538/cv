@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+      header{
+        text-align: center;
+        background: mistyrose;
+        padding: 50px;
+      }
+
+      img{
+        width: 15%;
+        padding-bottom: 20px;
+      }
+
+    *{
+       box-sizing: border-box;
+    }
+
+    aside{
+      float: left;
+      width: 40%;
+      padding-left: 8%;
+      border-right: 3px solid black;
+    }
+
+    article{
+      float: right;
+      width: 60%;
+      padding-right: 10px;
+      padding-left: 4%;
+
+
+    }
+
+    h2{
+    border:5px solid black;
+    background-color: black;
+    color: white;
+    }
+
+    p{
+      font-size: 18px;
+    }
+    
+    body{
+
+    }
+
+    footer{
+        float: none;
+        clear: both;
+        padding-top: 20px;
+        text-align: center;
+  
+    }
+
+    @media screen and (max-width: 800px){
+        
+        article,aside{
+            width:100%;
+            text-align:center;
+            padding: 0;
+            border: none;
+        }
+        img{
+            width: 48%;
+        }
+    }
+
+    /* effet machine à écrire (SIMPLE) */
+.animate-text { 
+    visibility:hidden;
+  font-family:"courier",sans-serif;
+  color:black; 
+}
+
+/* déco */
+.animate-text { 
+  font-size: 30px;
+  border:1px dashed #ccc;
+}
+
+/* effet machine à écrire + animation CSS (SPECIAL) */
+/*
+.animate-text span { 
+    display:inline-block;
+  color:purple; 
+  animation:fade-in 0.8s ease-in-out 1;
+    animation-fill-mode: forwards;
+}
+@keyframes fade-in {
+    0% { opacity:0; font-size:0; xxmargin-left:100px; }
+  100% { opacity:1; xxfont-size:300%; xxtransform:rotate(360deg); margin-left:0; }
+}
+*/
+    </style>
+    <html lang="fr">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CV</title>
+ 
+</head>
+<body>
+<header>
+   <img src="https://cdn.dribbble.com/users/2899181/screenshots/5714187/media/dc72e3a030be542af1391987d73ca09a.gif">
+   <h1>WANG Li</h1>
+   <p class="animate-text">Bienvenu dans mon espace, ceci est mon CV, à très bientôt</p>
+</header>
+
+    
+
+<aside>
+    
+<div>
+  <h2>PROFIL</h2>
+     <h3>&#127968; Adresse</h3>
+        <p>9, rue des mûriers, 33130 bègles</p>
+     <h3>📮 Email</h3>
+        <p><a href="mailto:wanglijtm@gmail.com">wanglijtm@gmail.com</a></p>
+     <h3>&#128241; Téléphone</h3>
+        <p><a href="tel:06 95 91 33 53">06 95 91 33 53</a></p>
+     <h3>&#127874; Date de naissance</h3>
+        <p>08/06/1994 (28 ans)</p>
+     <h3>&#128663; Permis</h3>
+        <p>permis B</p>
+ <h2>COMPÉTENCES</h2>
+           <p>Cuisine</p>
+             <p>Pâtisserie</p>
+                <p>Coder Html/Css</p>
+ <h2>LANGUES</h2>
+         <p>Français</p>
+           <p>Chinois</p>
+             <p>Anglais</p>             
+<h2>LOISIRS</h2>
+        <p>Pâtisserie</p>
+             <p>Voyage</p>
+          <p>apprendre à coder la language informatique</p>
+</div>
+</aside>
+
+     <article>
+        <div class="C2">
+       <h2>EXPÉRIENCES PROFESSIONNELLES</h2>
+       <span style='font-size:40px;'>&#128188;</span>
+             <p>2017-2023: polyvalent restauration Yaki Yaki à Bègles (5 ans )</p>
+                <p>2016-2017: Apprentie en Chocolaterie La Forêt Noire à Limoges (1 ans) </p>
+                   <p>2015-2016: Apprentie en Pâtisserie restauration Philipe Redon à Limoges (1 ans)</p>
+                
+       
+       <h2>FORMATION</h2>
+       <span style='font-size:40px;'>&#127891;</span>
+         <p>2016-2017: Mention complémentaire Chocolatière/ en alternance CFA 13 Vents à Tulle (1 ans)</p>
+            <p>2015-2016: Mention complémentaire Dessert à l'assiette/ en alternance CFA 13 Vents à Tulle (1 ans )</p>
+                <p>2012-2015: Bac Pro/ Restauration-cuisine Lycée Jean-Monnet à Limoges (3 ans)</p>
+                  
+       </div>
+     </article>
+       <footer>
+           <p>Copyright ©2022 All rights reserved | &#10084;by Li</p>           
+       </footer>
+
+
+
+       
+<SCRIPT LANGUAGE=JavaScript>
+
+/* ------------------------- */
+/* Version en JavaScript pur */
+/* ------------------------- */
+"use strict";
+window.addEventListener("DOMContentLoaded", (event) => {
+  animate_text();
+});
+// -------------------
+function animate_text() 
+{
+  let delay = 100,
+      delay_start = 0,
+      contents,
+      letters;
+
+  document.querySelectorAll(".animate-text").forEach(function (elem) {
+    contents = elem.textContent.trim();
+    elem.textContent = "";
+    letters = contents.split("");
+    elem.style.visibility = 'visible';
+
+    letters.forEach(function (letter, index_1) {
+      setTimeout(function () {
+        // ---------
+        // effet machine à écrire (SIMPLE)
+        elem.textContent += letter;
+        // ---------
+        // OU :
+        // effet machine à écrire + animation CSS (SPECIAL)
+        /*
+        var span = document.createElement('span');
+        span.innerHTML = letter.replace(/ /,'&nbsp;');
+        elem.appendChild(span);
+*/
+        // ---------
+      }, delay_start + delay * index_1);
+    });    
+    delay_start += delay * letters.length;
+  });
+}
+
+/* ------------------------- */
+/* version jQuery */
+/* ------------------------- */
+/*
+"use strict";
+$(document).ready(function() {
+  animate_text();
+});
+// -------------------
+function animate_text() 
+{
+  let delay = 100,
+      delay_start = 0,
+      contents,
+      letters;
+
+  $(".animate-text").each(function(index, obj) {
+    contents = $(obj).text().trim();
+    $(obj).html(''); // on vide le contenu
+    letters = contents.split("");
+    $(letters).each(function(index_1, letter) {
+      setTimeout(function() {
+        // ---------
+        // effet machine à écrire simple
+        $(obj).html( $(obj).html() + letter ); // on ajoute chaque lettre l une après l autre
+        // ---------
+        // ---------
+      }, delay_start + delay * index_1);
+    });
+    // le suivant démarre à la fin du précédent
+    delay_start += delay * letters.length;
+  });
+}
+*/
+</SCRIPT>
+</body>
+</html>
+
+
+
+
