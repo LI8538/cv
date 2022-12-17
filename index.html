@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- Load font awesome icons -->
+<!-- Load font awesome icons -->
+<script src="https://kit.fontawesome.com/026e0da46e.js" crossorigin="anonymous"></script>
 	  <html lang="fr">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,23 +17,39 @@
      }
 
 
-    .bouton{
-    	position: absolute;
-    	top: 23%;
-    	left: 70%;
-    
-    }
 
-    a{
-     text-decoration: none;
-      border:5px dotted; blueviolet ;
-      background: dodgerblue;
-      color: white;
-      padding: 15px 40px;
-      font-size: 20px;
-      border-radius: 40px;
-      position: fixed;
-    }
+
+   .github{
+     background: white;
+     color: rgb(24, 49, 83);
+  }
+
+  .linkedin{
+     background: white;
+     color: rgb(24, 49, 83);
+  }
+
+  .whatsapp{
+     background: white;
+     color: green;
+  }
+
+  
+  .cv{
+    text-decoration: none;
+    color: black;
+    border: 5px solid black;
+    border-radius: 80px;
+  }
+  .icone{
+    font-size: 80px;
+    text-align: center;
+
+
+
+      }
+    
+
 
     @media screen and (max-width: 800px){
         img{
@@ -46,12 +65,16 @@
     </style>
 </head>
 <body>
-    <div class="bouton">
-        <p>
-        	 <a href="cv.html">CV</a>
-        </p>
+     <div class="icone">
+    <a href="https://github.com/LI8538" class="github" target="_blank"><i class="fa-brands fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/wang-li" class="linkedin" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+     <a href="https://wa.me/0695913353" class="whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+     <a href="cv.html" class="cv" target="_blank">CV</a>
+
     </div>
     <img src="https://i.pinimg.com/originals/2a/53/65/2a53651a35816f499270d8275fd5318f.gif" width="100%" alt="jpg"></img>
+   
+    
 
 </body>
 
