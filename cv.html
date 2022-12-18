@@ -6,7 +6,7 @@
         text-align: center;
         background-image: url(https://cdn.pixabay.com/photo/2018/01/29/13/03/internet-3116062_1280.jpg);
         padding: 50px;
-
+        background-size:cover ;
 
       }
 
@@ -15,6 +15,14 @@
         border: 5px solid whitesmoke;
         border-radius: 30px;
       }
+
+    h1{ 
+        background-color: rgb(54,66,66);
+        border: white 5px dashed;
+        border-radius: 80px;
+        color: white;
+         }
+
 
     *{
        box-sizing: border-box;
@@ -76,6 +84,11 @@
      a:hover, a:active{
         background-color: red;
     }
+
+    .animate-text{
+        color:white; 
+        background-color: deeppink;
+    }
    
 
     @media screen and (max-width: 800px){
@@ -85,6 +98,10 @@
             text-align:center;
             padding: 0;
             border: none;
+        }
+
+        img{
+            width: 30%;
         }
         
     }
@@ -129,9 +146,11 @@
    <br>
    <br>
    <img src="1.jpg" alt="PROFIL">
+   <div class="nom">
    <h1>WANG Li</h1>
+   </div>
    <p class="jpg"><a href="cv.jpg" target="_blank">Version JPG</a></p>
-   <p class="animate-text" style="color:white; background-color: deeppink;">Bienvenue dans mon espace, ceci est mon CV, à très bientôt</p>
+   <p class="animate-text">Bienvenue dans mon espace, ceci est mon CV, à très bientôt</p>
 </header>  
 
 <aside>
